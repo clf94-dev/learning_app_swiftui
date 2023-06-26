@@ -15,6 +15,7 @@
 		329B6C5C2A49DCC900A0F8A4 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 329B6C5A2A49DCC900A0F8A4 /* data.json */; };
 		329B6C5D2A49DCC900A0F8A4 /* style.html in Resources */ = {isa = PBXBuildFile; fileRef = 329B6C5B2A49DCC900A0F8A4 /* style.html */; };
 		329B6C5F2A49DEAD00A0F8A4 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B6C5E2A49DEAD00A0F8A4 /* Models.swift */; };
+		32E6E3002A49E9B6001E4609 /* CardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6E2FF2A49E9B6001E4609 /* CardItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		329B6C5A2A49DCC900A0F8A4 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		329B6C5B2A49DCC900A0F8A4 /* style.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = style.html; sourceTree = "<group>"; };
 		329B6C5E2A49DEAD00A0F8A4 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		32E6E2FF2A49E9B6001E4609 /* CardItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +67,6 @@
 				329B6C542A49D65100A0F8A4 /* Views */,
 				329B6C532A49D64B00A0F8A4 /* Models */,
 				329B6C452A49D5EC00A0F8A4 /* LearningApp.swift */,
-				329B6C472A49D5EC00A0F8A4 /* HomeView.swift */,
 				329B6C492A49D5EE00A0F8A4 /* Assets.xcassets */,
 				329B6C4B2A49D5EE00A0F8A4 /* Preview Content */,
 			);
@@ -91,6 +92,8 @@
 		329B6C542A49D65100A0F8A4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				329B6C472A49D5EC00A0F8A4 /* HomeView.swift */,
+				32E6E2FF2A49E9B6001E4609 /* CardItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32E6E3002A49E9B6001E4609 /* CardItemView.swift in Sources */,
 				329B6C482A49D5EC00A0F8A4 /* HomeView.swift in Sources */,
 				329B6C462A49D5EC00A0F8A4 /* LearningApp.swift in Sources */,
 				329B6C592A49D9CB00A0F8A4 /* ContentModel.swift in Sources */,
