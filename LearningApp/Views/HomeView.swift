@@ -10,9 +10,13 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject var model:ContentModel
     var body: some View {
-        VStack {
+        VStack (alignment: .leading) {
             Text("Get Started")
+                .bold()
+                .font(.largeTitle)
+                .padding(.bottom, 3)
             Text("What would you like to do today?")
+                .padding(.bottom, 15)
             ScrollView{
                 LazyVStack{
                     ForEach(model.modules){ module in
