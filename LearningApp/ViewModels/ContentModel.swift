@@ -29,7 +29,7 @@ class ContentModel: ObservableObject{
             print(error)
         }
         
-        let styleUrl = BundleMAin.url(forResource: "style", withExtension: "html")
+        let styleUrl = BundleMain.url(forResource: "style", withExtension: "html")
         
         do {
             let styleData = try Data(contentsOf: styleUrl!)
