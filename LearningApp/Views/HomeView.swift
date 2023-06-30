@@ -11,7 +11,7 @@ struct HomeView: View {
     @EnvironmentObject var model:ContentModel
     var body: some View {
         
-        NavigationView {
+        NavigationStack {
             VStack (alignment: .leading) {
                 Text("Get Started")
                     .bold()
@@ -30,13 +30,14 @@ struct HomeView: View {
                                 CardItemView(image: module.content.image, title: module.category, time: module.content.time, description: module.content.description, items: module.content.lessons,
                                     isTest: false)
                                 .padding(5)
+                                .foregroundColor(.black)
                                 })
                             CardItemView(image: module.test.image, title: module.category, time: module.test.time, description: module.test.description, items: module.test.questions,
                                 isTest: true)
                                 .padding(5)
                           
                         }
-                    }.foregroundColor(.black)
+                    }
                 }
             }
             .padding()
