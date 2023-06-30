@@ -18,6 +18,9 @@
 		32E6E3002A49E9B6001E4609 /* CardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6E2FF2A49E9B6001E4609 /* CardItemView.swift */; };
 		32E6E3022A4DE5BB001E4609 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6E3012A4DE5BB001E4609 /* ContentView.swift */; };
 		32E6E3042A4DF193001E4609 /* ContentItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6E3032A4DF193001E4609 /* ContentItemView.swift */; };
+		32E6E3062A4F30F8001E4609 /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6E3052A4F30F8001E4609 /* ContentDetailView.swift */; };
+		32E6E3092A4F3482001E4609 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E6E3082A4F3482001E4609 /* AVKit.framework */; };
+		32E6E30B2A4F361B001E4609 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6E30A2A4F361B001E4609 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		32E6E2FF2A49E9B6001E4609 /* CardItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemView.swift; sourceTree = "<group>"; };
 		32E6E3012A4DE5BB001E4609 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		32E6E3032A4DF193001E4609 /* ContentItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentItemView.swift; sourceTree = "<group>"; };
+		32E6E3052A4F30F8001E4609 /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
+		32E6E3082A4F3482001E4609 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		32E6E30A2A4F361B001E4609 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32E6E3092A4F3482001E4609 /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +58,7 @@
 			children = (
 				329B6C442A49D5EC00A0F8A4 /* LearningApp */,
 				329B6C432A49D5EC00A0F8A4 /* Products */,
+				32E6E3072A4F3481001E4609 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +108,7 @@
 				32E6E2FF2A49E9B6001E4609 /* CardItemView.swift */,
 				32E6E3012A4DE5BB001E4609 /* ContentView.swift */,
 				32E6E3032A4DF193001E4609 /* ContentItemView.swift */,
+				32E6E3052A4F30F8001E4609 /* ContentDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,6 +126,7 @@
 			children = (
 				329B6C5A2A49DCC900A0F8A4 /* data.json */,
 				329B6C5B2A49DCC900A0F8A4 /* style.html */,
+				32E6E30A2A4F361B001E4609 /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -126,6 +136,14 @@
 			children = (
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		32E6E3072A4F3481001E4609 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32E6E3082A4F3482001E4609 /* AVKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,10 +221,12 @@
 				32E6E3002A49E9B6001E4609 /* CardItemView.swift in Sources */,
 				329B6C482A49D5EC00A0F8A4 /* HomeView.swift in Sources */,
 				32E6E3022A4DE5BB001E4609 /* ContentView.swift in Sources */,
+				32E6E3062A4F30F8001E4609 /* ContentDetailView.swift in Sources */,
 				32E6E3042A4DF193001E4609 /* ContentItemView.swift in Sources */,
 				329B6C462A49D5EC00A0F8A4 /* LearningApp.swift in Sources */,
 				329B6C592A49D9CB00A0F8A4 /* ContentModel.swift in Sources */,
 				329B6C5F2A49DEAD00A0F8A4 /* Models.swift in Sources */,
+				32E6E30B2A4F361B001E4609 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
