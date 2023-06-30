@@ -21,17 +21,14 @@ struct ContentDetailView: View {
             // MARK: - Description
             CodeTextView()
             // MARK: - Next Lesson Button
-            if(model.hasNextLesson()) {
+            if model.hasNextLesson() {
                 Button {
                     model.nextLesson()
                 } label: {
                     
                     ZStack {
-                        Rectangle()
+                        ButtonCard(color: .green)
                             .frame(height:48)
-                            .foregroundColor(.green)
-                            .cornerRadius(10)
-                            .shadow(radius: 5)
                         Text("Next Lesson: \(model.currentModule!.content.lessons[model.currentLessonIndex+1].title)")
                             .bold()
                             .foregroundColor(.white)
@@ -39,6 +36,23 @@ struct ContentDetailView: View {
                 }.padding()
                     
 
+            }
+            else {
+                // Show complete button
+                Button {
+                    // take user back to the homeView
+                    model.currentContentSelected = nil
+                }
+                label: {
+                    
+                    ZStack {
+                        ButtonCard(color: .green)
+                            .frame(height:48)
+                        Text("Complete")
+                            .bold()
+                            .foregroundColor(.white)
+                    }
+                }.padding()
             }
         }.padding()
             .navigationTitle(lesson?.title ?? "")

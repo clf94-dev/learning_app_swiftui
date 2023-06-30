@@ -22,6 +22,7 @@
 		32E6E3092A4F3482001E4609 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E6E3082A4F3482001E4609 /* AVKit.framework */; };
 		32E6E30B2A4F361B001E4609 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6E30A2A4F361B001E4609 /* Constants.swift */; };
 		32E6E30D2A4F3F3C001E4609 /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6E30C2A4F3F3C001E4609 /* CodeTextView.swift */; };
+		32E6E30F2A4F4FA6001E4609 /* ButtonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6E30E2A4F4FA6001E4609 /* ButtonCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		32E6E3082A4F3482001E4609 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		32E6E30A2A4F361B001E4609 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		32E6E30C2A4F3F3C001E4609 /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
+		32E6E30E2A4F4FA6001E4609 /* ButtonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				32E6E3032A4DF193001E4609 /* ContentItemView.swift */,
 				32E6E3052A4F30F8001E4609 /* ContentDetailView.swift */,
 				32E6E30C2A4F3F3C001E4609 /* CodeTextView.swift */,
+				32E6E30E2A4F4FA6001E4609 /* ButtonCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32E6E30F2A4F4FA6001E4609 /* ButtonCard.swift in Sources */,
 				32E6E3002A49E9B6001E4609 /* CardItemView.swift in Sources */,
 				329B6C482A49D5EC00A0F8A4 /* HomeView.swift in Sources */,
 				32E6E3022A4DE5BB001E4609 /* ContentView.swift in Sources */,

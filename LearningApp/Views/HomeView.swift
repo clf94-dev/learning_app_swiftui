@@ -26,7 +26,10 @@ struct HomeView: View {
                                 ContentView()
                                 .onAppear(perform: {
                                     model.beginModule(module.id)
-                                }), label: {
+                                }),
+                                           tag: module.id,
+                                           selection: $model.currentContentSelected
+                                , label: {
                                 CardItemView(image: module.content.image, title: module.category, time: module.content.time, description: module.content.description, items: module.content.lessons,
                                     isTest: false)
                                 .padding(5)
