@@ -16,6 +16,8 @@ class ContentModel: ObservableObject{
     @Published var currentLesson: Lesson?
     var currentLessonIndex = 0
     
+    @Published var lessonDescription = NSAttributedString()
+    
     var styleData: Data?
     init(){
         getLocalData()
@@ -65,6 +67,7 @@ class ContentModel: ObservableObject{
             currentLessonIndex = 0
         }
         currentLesson = currentModule!.content.lessons[currentLessonIndex]
+        lessonDescription = addStyling(currentLesson!.explanation)
     }
     func hasNextLesson() -> Bool{
         return currentLessonIndex + 1 < currentModule!.content.lessons.count
@@ -73,11 +76,43 @@ class ContentModel: ObservableObject{
         currentLessonIndex += 1
         if hasNextLesson() {
             currentLesson = currentModule!.content.lessons[currentLessonIndex]
+            lessonDescription = addStyling(currentLesson!.explanation)
         }
         else{
             currentLesson = nil
             currentLessonIndex = 0
         }
+        
+    }
+    // MARK: - Code styling
+    private func addStyling(_ htmlString: String) -> NSAttributedString{
+        var resultsStrings = NSAttributedString()
+        
+        var data = Data()
+        if styleData != nil {
+            data.append(styleData!)
+        }
+        data.append(Data(htmlString.utf8))
+        
+        // option to convert to attributed string (withou catching the error)
+        
+         if let attributedString = try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) {
+             resultsStrings = attributedString
+        }
+        
+        // catch error
+        // do {
+            // let attributedString = try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil)
+            // resultsStrings = attributedString
+            
+        // }
+        // catch{
+            // print("Couldn't turn html into attributed string")
+        // }
+        
+        
+        return resultsStrings
+        
         
     }
 }

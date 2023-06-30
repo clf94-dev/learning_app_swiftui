@@ -18,7 +18,9 @@ struct ContentDetailView: View {
                 VideoPlayer(player: AVPlayer(url: videoUrl!))
                     .cornerRadius(10)
             }
-            
+            // MARK: - Description
+            CodeTextView()
+            // MARK: - Next Lesson Button
             if(model.hasNextLesson()) {
                 Button {
                     model.nextLesson()
@@ -39,6 +41,7 @@ struct ContentDetailView: View {
 
             }
         }.padding()
+            .navigationTitle(lesson?.title ?? "")
        
       
        
