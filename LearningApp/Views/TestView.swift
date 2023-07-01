@@ -64,15 +64,23 @@ struct TestView: View {
                 }
                 
                 Button{
-                    submittedAnswer = true
-                    if selectedAnswerIndex == model.currentQuestion!.correctIndex {
-                        numCorrect += 1
-                }
+                    if submittedAnswer == false {
+                        submittedAnswer = true
+                        if selectedAnswerIndex == model.currentQuestion!.correctIndex {
+                            numCorrect += 1
+                    } else {
+                        model.nextQuestion()
+                        submittedAnswer = false
+                        selectedAnswerIndex = nil
+                        
+                    }
+                        
+                    }
                 } label: {
                     ZStack {
                         ButtonCard(color:  .green)
                             .frame(height: 48)
-                        Text("Submit")
+                        Text(submittedAnswer ? "Next question" : "Submit")
                             .bold()
                         
                     }.foregroundColor(.white)
