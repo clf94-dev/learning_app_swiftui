@@ -20,28 +20,47 @@ struct HomeView: View {
                 Text("What would you like to do today?")
                     .padding(.bottom, 15)
                 ScrollView{
+                    
+                    
                     LazyVStack{
                         ForEach(model.modules){ module in
                             NavigationLink(destination:
-                                ContentView()
+                                            ContentView()
                                 .onAppear(perform: {
                                     model.beginModule(module.id)
                                 }),
                                            tag: module.id,
                                            selection: $model.currentContentSelected
-                                , label: {
+                                           , label: {
                                 CardItemView(image: module.content.image, title: module.category, time: module.content.time, description: module.content.description, items: module.content.lessons,
-                                    isTest: false)
+                                             isTest: false)
                                 .padding(5)
                                 .foregroundColor(.black)
+                            })
+                            NavigationLink(destination: TestView()
+                                .onAppear(perform: {
+                                        model.beginTest(module.id)
+                                    
                                 })
-                            CardItemView(image: module.test.image, title: module.category, time: module.test.time, description: module.test.description, items: module.test.questions,
-                                isTest: true)
+                                           ,
+                                           tag: module.id,
+                                           selection: $model.currentTestSelected
+                                           ,label:  {
+                                CardItemView(image: module.test.image, title: module.category, time: module.test.time, description: module.test.description, items: module.test.questions,
+                                             isTest: true)
                                 .padding(5)
-                          
+                                .foregroundColor(.black)
+                                
+                            })
+                            NavigationLink(destination: EmptyView()){
+                                EmptyView()
+                            }
+                            
+                            
                         }
                     }
                 }
+                
             }
             .padding()
         }
