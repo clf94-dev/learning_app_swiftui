@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TestView: View {
     @EnvironmentObject var model: ContentModel
-    @State var selectedAnswerIndex = -1
+    @State var selectedAnswerIndex: Int?
     @State var numCorrect = 0
     @State var submittedAnswer = false
     var body: some View {
@@ -45,7 +45,7 @@ struct TestView: View {
                     submittedAnswer = true
                     if selectedAnswerIndex == model.currentQuestion!.correctIndex {
                         numCorrect += 1
-                    }
+                }
                 } label: {
                     ZStack {
                         ButtonCard(color:  .green)
@@ -55,7 +55,7 @@ struct TestView: View {
                         
                     }.foregroundColor(.white)
                         .padding()
-                }
+                }.disabled(selectedAnswerIndex == nil)
                 
                 
             }.navigationTitle("\(model.currentModule?.category ?? "") Test")
