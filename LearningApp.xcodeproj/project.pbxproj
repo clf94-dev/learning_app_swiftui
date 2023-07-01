@@ -24,6 +24,7 @@
 		32E6E30D2A4F3F3C001E4609 /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6E30C2A4F3F3C001E4609 /* CodeTextView.swift */; };
 		32E6E30F2A4F4FA6001E4609 /* ButtonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6E30E2A4F4FA6001E4609 /* ButtonCard.swift */; };
 		32E6E3112A4FE8C6001E4609 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6E3102A4FE8C6001E4609 /* TestView.swift */; };
+		32E6E3132A5027B8001E4609 /* TestResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6E3122A5027B8001E4609 /* TestResultsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		32E6E30C2A4F3F3C001E4609 /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
 		32E6E30E2A4F4FA6001E4609 /* ButtonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCard.swift; sourceTree = "<group>"; };
 		32E6E3102A4FE8C6001E4609 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		32E6E3122A5027B8001E4609 /* TestResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				32E6E30C2A4F3F3C001E4609 /* CodeTextView.swift */,
 				32E6E30E2A4F4FA6001E4609 /* ButtonCard.swift */,
 				32E6E3102A4FE8C6001E4609 /* TestView.swift */,
+				32E6E3122A5027B8001E4609 /* TestResultsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				329B6C462A49D5EC00A0F8A4 /* LearningApp.swift in Sources */,
 				32E6E30D2A4F3F3C001E4609 /* CodeTextView.swift in Sources */,
 				329B6C592A49D9CB00A0F8A4 /* ContentModel.swift in Sources */,
+				32E6E3132A5027B8001E4609 /* TestResultsView.swift in Sources */,
 				329B6C5F2A49DEAD00A0F8A4 /* Models.swift in Sources */,
 				32E6E30B2A4F361B001E4609 /* Constants.swift in Sources */,
 			);
