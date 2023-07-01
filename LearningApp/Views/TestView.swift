@@ -10,6 +10,8 @@ import SwiftUI
 struct TestView: View {
     @EnvironmentObject var model: ContentModel
     @State var selectedAnswerIndex = -1
+    @State var numCorrect = 0
+    @State var submittedAnswer = false
     var body: some View {
         if model.currentQuestion != nil {
             VStack (alignment: .leading) {
@@ -26,16 +28,33 @@ struct TestView: View {
                         ForEach(0..<model.currentQuestion!.answers.count, id: \.self){ index in
                             
                             Button{
-                               selectedAnswerIndex = index                            } label: {
+                                selectedAnswerIndex = index
+                            } label: {
                                 ZStack {
                                     ButtonCard(color: selectedAnswerIndex == index ? .gray : .white)
                                         .frame(height: 48)
                                     Text(model.currentQuestion!.answers[index])
                                 }.foregroundColor(.black)
-                            }
+                            }.disabled(submittedAnswer)
                         }
                     }.padding()
 
+                }
+                
+                Button{
+                    submittedAnswer = true
+                    if selectedAnswerIndex == model.currentQuestion!.correctIndex {
+                        numCorrect += 1
+                    }
+                } label: {
+                    ZStack {
+                        ButtonCard(color:  .green)
+                            .frame(height: 48)
+                        Text("Submit")
+                            .bold()
+                        
+                    }.foregroundColor(.white)
+                        .padding()
                 }
                 
                 
