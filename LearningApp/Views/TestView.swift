@@ -11,13 +11,36 @@ struct TestView: View {
     @EnvironmentObject var model: ContentModel
     var body: some View {
         if model.currentQuestion != nil {
-            VStack {
-                Text("Question \(model.currentQuestionIndex + 1) of \(model.currentModule?.test.questions.count ?? 0)")
+            VStack (alignment: .leading) {
+                Text("Question \(model.currentQuestionIndex + 1) of \(model.currentModule?.test.questions.count ?? 0)").padding(.leading, 20)
+
+        
+                // question text
+                CodeTextView().padding(.horizontal, 20)
+
                 
-                CodeTextView()
+                // answers
+                ScrollView{
+                    VStack (alignment: .leading){
+                        ForEach(0..<model.currentQuestion!.answers.count, id: \.self){ index in
+                            
+                            Button{
+                               // TODO
+                            } label: {
+                                ZStack {
+                                    ButtonCard(color: .white)
+                                        .frame(height: 48)
+                                    Text(model.currentQuestion!.answers[index])
+                                }.foregroundColor(.black)
+                            }
+                        }
+                    }.padding()
+
+                }
+                
                 
             }.navigationTitle("\(model.currentModule?.category ?? "") Test")
-        } else {
+                        } else {
             // Test hasn't loaded yet
             ProgressView()
         }
