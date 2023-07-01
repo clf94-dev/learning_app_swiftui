@@ -68,13 +68,11 @@ struct TestView: View {
                         submittedAnswer = true
                         if selectedAnswerIndex == model.currentQuestion!.correctIndex {
                             numCorrect += 1
+                        }
                     } else {
                         model.nextQuestion()
                         submittedAnswer = false
                         selectedAnswerIndex = nil
-                        
-                    }
-                        
                     }
                 } label: {
                     ZStack {
