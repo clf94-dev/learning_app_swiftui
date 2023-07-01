@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TestView: View {
     @EnvironmentObject var model: ContentModel
+    @State var selectedAnswerIndex = -1
     var body: some View {
         if model.currentQuestion != nil {
             VStack (alignment: .leading) {
@@ -25,10 +26,9 @@ struct TestView: View {
                         ForEach(0..<model.currentQuestion!.answers.count, id: \.self){ index in
                             
                             Button{
-                               // TODO
-                            } label: {
+                               selectedAnswerIndex = index                            } label: {
                                 ZStack {
-                                    ButtonCard(color: .white)
+                                    ButtonCard(color: selectedAnswerIndex == index ? .gray : .white)
                                         .frame(height: 48)
                                     Text(model.currentQuestion!.answers[index])
                                 }.foregroundColor(.black)
