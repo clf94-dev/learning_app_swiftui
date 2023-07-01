@@ -80,7 +80,7 @@ struct TestView: View {
                     ZStack {
                         ButtonCard(color:  .green)
                             .frame(height: 48)
-                        Text(submittedAnswer ? "Next question" : "Submit")
+                        Text(buttonText)
                             .bold()
                         
                     }.foregroundColor(.white)
@@ -94,6 +94,19 @@ struct TestView: View {
             ProgressView()
         }
         
+    }
+    
+    var buttonText: String {
+        if submittedAnswer {
+            if model.currentQuestionIndex + 1 == model.currentModule!.test.questions.count{
+                return "Finish"
+            } else {
+                return "Next"
+            }
+            
+        } else {
+            return "Submit"
+        }
     }
 }
 
