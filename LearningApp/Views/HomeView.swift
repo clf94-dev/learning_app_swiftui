@@ -51,7 +51,7 @@ struct HomeView: View {
                                 .padding(5)
                                 .foregroundColor(.black)
                                 
-                            })
+                            }).padding(.bottom, 8)
                             NavigationLink(destination: EmptyView()){
                                 EmptyView()
                             }
