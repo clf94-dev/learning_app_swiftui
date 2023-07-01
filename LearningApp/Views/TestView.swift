@@ -31,8 +31,30 @@ struct TestView: View {
                                 selectedAnswerIndex = index
                             } label: {
                                 ZStack {
-                                    ButtonCard(color: selectedAnswerIndex == index ? .gray : .white)
-                                        .frame(height: 48)
+                                    if !submittedAnswer {
+                                        ButtonCard(color: selectedAnswerIndex == index ? .gray : .white)
+                                            .frame(height: 48)
+                                    } else {
+                                        if index == selectedAnswerIndex && index == model.currentQuestion!.correctIndex {
+                                            // user selected the correct answer
+                                            ButtonCard(color: .green)
+                                                .frame(height: 48)
+                                        } else if index == selectedAnswerIndex && index != model.currentQuestion!.correctIndex {
+                                            // user selected the wrong answer
+                                            ButtonCard(color: .red)
+                                                .frame(height: 48)
+                                            
+                                        } else if  index == model.currentQuestion!.correctIndex {
+                                            // correct option not selected by user
+                                            ButtonCard(color: .green)
+                                                .frame(height: 48)
+                                        } else {
+                                            // rest of the options not selected & not correct
+                                            ButtonCard(color: .white)
+                                                .frame(height: 48)
+                                        }
+                                        
+                                    }
                                     Text(model.currentQuestion!.answers[index])
                                 }.foregroundColor(.black)
                             }.disabled(submittedAnswer)
